@@ -1,0 +1,281 @@
+/*
+  The MIT License (MIT)
+
+  Copyright (c) 2019 Matthew Rodusek All rights reserved.
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+*/
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #333;
+}
+
+h2, h3, h4, h5, h6 {
+  text-transform: capitalize;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #555;
+  background-color: #f3f3f3;
+}
+
+.centered {
+  text-align: center;
+}
+
+.definition {
+  border-bottom: 1px dotted rgb(26, 121, 68);
+  text-decoration: none;
+}
+
+/*--------------------------------------------------------------------------*/
+
+#navigation {
+  /* background-color: #4484CE; */
+  background-color: #1d8acb;
+}
+
+#navigation .nav > li > a{
+  padding-bottom: 10px;
+}
+html {
+  scroll-behavior: smooth;
+}
+#logo > a,
+#navigation .nav > li > a{
+  color: white;
+}
+#navigation #logo > a:hover, #navigation #logo > a:focus,
+#navigation .nav > li > a:focus,
+#navigation .nav > li > a:hover {
+  /* color: #f8eee7; */
+  color: #c1dff0;
+}
+
+#logo {
+  margin: 0 0 0 0;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  color: black;
+}
+
+/*--------------------------------------------------------------------------*/
+
+/* Console Formatting */
+
+#banner {
+  /* background: #d9d9d9; */
+  width: 100%;
+}
+
+#console {
+  background-color: black;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 30px;
+}
+#banner {
+  position: relative;
+}
+#banner-inner {
+  position: relative;
+}
+#banner-inner > .center-container {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+}
+#console > p {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  line-height: 1;
+}
+#console .blinking-cursor {
+  font-weight: bold;
+  color: white;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+
+#console .spacer {
+  white-space: pre;
+}
+
+#console .ansi-green {
+  color: green;
+}
+#console .ansi-white {
+  color: white;
+}
+#console .ansi-magenta {
+  color: magenta;
+}
+#console .ansi-yellow {
+  color: yellow;
+}
+@keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+@-moz-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+@-webkit-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+@-ms-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+@-o-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+/*--------------------------------------------------------------------------*/
+
+/* Cards */
+
+#cards .row {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 180px;
+  height: 180px;
+  /* border: 1px solid #f1f1f1; */
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front, .flip-card-back {
+  width: 180px;
+  height: 180px;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+/* TODO(bitwizeshift): use a sprite-sheet for these cards */
+#cpp-card > .flip-card-front, #cpp-card > .flip-card-back {
+  background-image: url(/img/c++-card.180x180.png)
+}
+.flip-card-back {
+  transform: scale(1, 1);
+}
+#card2 > .flip-card-front, #card2 > .flip-card-back {
+  background-image: url(/img/functional-card.180x180.png)
+}
+
+#osi-card > .flip-card-front, #osi-card > .flip-card-back {
+  background-image: url(/img/osi-card.180x180.png)
+}
+
+/*--------------------------------------------------------------------------*/
+
+/* Footer */
+
+#footer {
+  background-color: #3c3c3c;
+  color: white;
+}
+
+#contact-title,
+#connect-title {
+  padding-top: 20px;
+}
+
+#contact-title > p {
+  margin-bottom: 0.5em;
+}
+#contact-name > p,
+#contact-email > p {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
