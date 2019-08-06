@@ -51,7 +51,8 @@ include 'src/functions.php'
 
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/paper/bootstrap.min.css" integrity="sha256-LxKiHTQko0DUCUSgrIK23SYMymvfuj8uxXmblBvVWm0=" crossorigin="anonymous" />
-  <link href="css/main.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/icomoon.css" />
 
   <!-- Support HTML5 in older browsers -->
   <!--[if lt IE 9]>

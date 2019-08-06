@@ -1,0 +1,52 @@
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../font/icomoon.eot?2fn3sq');
+  src:  url('../font/icomoon.eot?2fn3sq#iefix') format('embedded-opentype'),
+    url('../font/icomoon.ttf?2fn3sq') format('truetype'),
+    url('../font/icomoon.woff?2fn3sq') format('woff'),
+    url('../font/icomoon.svg?2fn3sq#icomoon') format('svg');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icomoon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Enable Ligatures ================ */
+  letter-spacing: 0;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  -o-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icomoon-stack:before {
+  content: "\e92e";
+}
+.icomoon-stackoverflow:before {
+  content: "\ead0";
+}
+.icomoon-git:before {
+  content: "\eae7";
+}
+.icomoon-github:before {
+  content: "\eab0";
+}
